@@ -34,6 +34,6 @@ h1, h2, h3, h4, h5, h6{
 	padding: 0;
 }
 
-.pagination{
-	font-style: italic;
+.page-item.active .page-link{
+	background-color: #0285BD;
 }
