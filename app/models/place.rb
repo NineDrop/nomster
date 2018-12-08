@@ -1,5 +1,7 @@
 class Place < ApplicationRecord
 	paginates_per 10
 	belongs_to :user
-	validates :name, presence: true
+	validates :name, presence: true, length: {minimum: 2}
+	validates :description, presence: true, length: {minimum: 10, maximum:150}
+	validates :address, presence: true, length: {minimum: 10}
 end
