@@ -5,7 +5,7 @@
 	<p><%= @place.description %></p>
 
 <% @place.photos.each do |photo|%>
-  <%= photo.picture %>
+  <img src="<%= photo.picture %>"/>
   <%= photo.caption %>
 <% end %>
 
