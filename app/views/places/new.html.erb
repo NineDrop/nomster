@@ -1,9 +1,9 @@
 <div class= "booyah-box col-10 offset-1">
 	<h1>Details for Your Spot</h1>
 	<%= simple_form_for @place do |f| %>
-		<%= f.input :name %>
-		<%= f.input :address %>
-		<%= f.input :description %>
+		<%= f.input :name. hint: false %>
+		<%= f.input :address, hint: false %>
+		<%= f.input :description, hint: false %>
 		<br />
 		<%= f.submit 'Create', class: 'btn btn-primary' %>
 	<% end %>
