@@ -6,7 +6,10 @@
 
 <% @place.photos.each do |photo|%>
   <img src="<%= photo.picture %>"/>
+  <br />
   <%= photo.caption %>
+  <br />
+  <br />
 <% end %>
 
 <% if @place.latitude.present? && @place.longitude.present? %>
