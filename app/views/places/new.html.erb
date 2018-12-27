@@ -1,7 +1,7 @@
-<div class= "booyah-box col-10 offset-1">
+<div class= "booyah-box col-10 col-sm-6 offset-1 offset-sm-3">
 	<h1>Details for Your Spot</h1>
 	<%= simple_form_for @place do |f| %>
-		<%= f.input :name. hint: false %>
+		<%= f.input :name, hint: false %>
 		<%= f.input :address, hint: false %>
 		<%= f.input :description, hint: false %>
 		<br />
