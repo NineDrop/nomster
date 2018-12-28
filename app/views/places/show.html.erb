@@ -5,13 +5,15 @@
 	<p><%= @place.description %></p>
 
 
-<% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture.url, class: "photo justify-content-center" %>
+<% @displayphoto.each do |photo| %>
+  <%= image_tag photo.picture.url, class: "photo" %>
   <br />
   <%= photo.caption %>
   <br />
   <br />
 <% end %>
+
+<%= paginate @displayphoto, window: 1, outerwindow: 1, class: "justify-content-center col-10" %>
 
 
 
@@ -68,7 +70,7 @@
 </div>
 
 <div class = "clear"></div>
-<div class = "row">
+<div class = "row col-sm-10 offset-sm-1">
   <% @place.comments.each do |comment| %>
     <div class = " col-12 col-sm-6">
       <blockquote>
@@ -95,8 +97,8 @@
       </div>
       <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
         <div class="modal-body">
-            <%= f.input :message, hint: false %>
-            <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+          <%= f.input :message, hint: false %>
+          <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -118,8 +120,8 @@
       </div>
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
-            <%= f.input :picture %>
-            <%= f.input :caption, hint: false %>
+          <%= f.input :picture %>
+          <%= f.input :caption, hint: false %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -129,3 +131,4 @@
     </div>
   </div>
 </div>
+
