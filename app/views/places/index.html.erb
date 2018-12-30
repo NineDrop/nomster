@@ -1,7 +1,4 @@
-<br />
-<div class="pagination justify-content-center">
-<%= paginate @places, window: 2, outer_window: 2 %>
-</div>
+
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -39,6 +36,10 @@
   </a>
 </div>
 
+<br />
+<div class="pagination justify-content-center">
+<%= paginate @places, window: 2, outer_window: 2 %>
+</div>
 
 
 <% @places.each do |place| %>

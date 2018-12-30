@@ -12,9 +12,9 @@
   <br />
   <br />
 <% end %>
-
-<%= paginate @displayphoto, window: 1, outerwindow: 1, class: "justify-content-center col-10" %>
-
+<div class="container pagination justify-content-center" >
+<%= paginate @displayphoto, window: 1, outerwindow: 1 %>
+</div>
 
 
 <% if @place.latitude.present? && @place.longitude.present? %>
